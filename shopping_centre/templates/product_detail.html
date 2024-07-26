@@ -1,0 +1,16 @@
+{% load static %}
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ product.name }}</h2>
+<p>{{ product.description }}</p>
+<p>Price: {{ product.price }}</p>
+<p>Stock: {{ product.stock }}</p>
+{% for image in images %}
+    <img src="{{ image.image.url }}" alt="{{ product.name }}">
+{% endfor %}
+<h3>Reviews</h3>
+{% for review in reviews %}
+    <p>{{ review.user.username }}: {{ review.comment }} ({{ review.rating }} stars)</p>
+{% endfor %}
+{% endblock %}

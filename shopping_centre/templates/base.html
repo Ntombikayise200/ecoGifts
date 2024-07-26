@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e0e0e0;
+        }
+        .hero h1 {
+            color: #004080;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .cta-buttons {
+            margin: 30px 0;
+        }
+        .cta-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .cta-buttons a:hover {
+            background-color: #002950;
+        }
+        .features, .testimonials {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .features h2, .testimonials h2 {
+            color: #004080;
+        }
+        .features p, .testimonials p {
+            margin: 20px 0;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #004080;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #004080;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'cart' %}">Cart</a>
+            <a href="{% url 'wishlist' %}">Wishlist</a>
+            <a href="{% url 'signup' %}">Signup</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-image">
+                <img src="https://example.com/hero-image.jpg" alt="Eco-friendly Reusables">
+            </div>
+            <h1>Empower Lives with Reusable Items</h1>
+            <p>Join us in our mission to provide essential reusable items to orphanages. Your support helps create a more sustainable and supportive environment for children in need. Start your journey with us today to make a difference.</p>
+            <div class="cta-buttons">
+                <a href="https://example.com/donate" target="_blank">Make a Donation</a>
+                <a href="https://example.com/volunteer" target="_blank">Become a Volunteer</a>
+            </div>
+        </section>
+    
+        <section class="features">
+            <h2>Why Support Our Charity?</h2>
+            <img src="Buying-and-selling-secondhand-clothing-article-updated--image.jpg" alt="Reusable Items"> <br>
+            <p>
+                Our charity is dedicated to collecting and distributing reusable items such as clothing, toys, educational materials, and household essentials to orphanages and underserved communities. By supporting our initiative, you contribute to improving the lives of children who lack basic necessities and help promote sustainability by reducing waste through the reuse and recycling of items.
+            </p>
+            
+            <p>
+                We collaborate closely with local organizations and volunteers to ensure that every donation reaches those in need efficiently. Your support not only meets immediate needs but also fosters a sense of community responsibility and environmental stewardship. Every contribution, no matter how small, plays a crucial role in enhancing the quality of life for children and building a more sustainable future for our planet.
+            </p>
+                    </section>
+
+    </div>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 MyShop</p>
+    </footer>
+</body>
+</html>
+
+   
